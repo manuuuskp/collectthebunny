@@ -1,0 +1,29 @@
+{% extends "./_templates/layout.twig" %}
+
+{# If rename this file, rename in gulp 'html' task as well #}
+{% block page %}
+<div class="main" data-module="Main">
+  <div class="screen address js--screen-address" data-name="address" data-module="Address">
+    <div class="address-container">
+      <input type="text" class="js--address">
+      <button class="js--btn-play">Play</button>
+    </div>
+  </div>
+  <div class="screen panorama js--screen-panorama" data-name="panorama" data-module="Panorama">
+    <input class="toggle-filter" type="checkbox"><label>use filter</label>
+    <div class="score">
+      Score: <span class="js--score">0</span>
+    </div>
+    <div class="map-container js--map"></div>
+  </div>
+</div>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYgB3CurAihKjIB-cE39Fl4vH8DJsixZo&libraries=places&callback=onMapSDKReady"></script>
+<script>
+  function onMapSDKReady() {
+    window.mapSDKReady = true
+  }
+</script>
+{% endblock %}

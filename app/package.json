@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/i18n": "^7.0.3",
+    "core-js": "^3.15.1",
+    "firebase": "^9.0.2",
+    "nuxt": "^2.15.7",
+    "nuxt-i18n": "^6.28.1",
+    "swiper": "^6.8.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.2.1",
+    "import-glob-loader": "^1.1.0",
+    "postcss": "^8.3.5",
+    "sass": "^1.38.0",
+    "sass-loader": "^10"
+  }
+}

@@ -1,0 +1,15 @@
+{% extends "./_templates/layout.twig" %}
+
+{% block page %}
+	<div class="custom-view" data-module="View3D"></div>
+	<script>
+		window.root = window.location.hostname === 'localhost' ? '' : '/milka-easter/'
+	</script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJqTIfwZJZvxb_ngjwH4EsZBdhU5gohKU&libraries=places&callback=onMapSDKReady"></script>
+	<script>
+		function onMapSDKReady() {
+window.mapSDKReady = true
+}
+	</script>
+{% endblock %}

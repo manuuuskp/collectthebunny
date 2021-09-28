@@ -1,0 +1,26 @@
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .map,
+  .street-view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .info-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    color: #ffffff;
+    font-weight: 900;
+    padding: 10px 15px;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,32 @@
+h1 {
+	font-family: $font-jumble;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 110%;
+	text-align: center;
+	letter-spacing: -0.02em;
+	color: #ebeaff;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sub-head {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 110%;
+	text-align: center;
+	color: #ebeaff;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}

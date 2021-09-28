@@ -1,0 +1,113 @@
+.panorama {
+  z-index: 1;
+
+  .toggle-filter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+
+    + label {
+      position: absolute;
+      top: 7px;
+      left: 30px;
+      color: white;
+      z-index: 100;
+    }
+
+    &:checked ~ .map-container {
+      [aria-label="Street View"] {
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+              to bottom right,
+              transparent,
+              rgba(49, 51, 118, 0) 75%,
+              rgba(49, 51, 118, 0.9) 100%
+            ),
+            linear-gradient(to bottom, transparent, rgba(49, 51, 118, 0) 60%, rgba(49, 51, 118, 0.9) 100%),
+            linear-gradient(to top, transparent, rgba(49, 51, 118, 0) 90%, rgba(49, 51, 118, 0.3) 100%);
+          pointer-events: none;
+          mix-blend-mode: multiply;
+          z-index: 2;
+        
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(49, 51, 118, 0.4);
+          pointer-events: none;
+          mix-blend-mode: screen;
+        }
+      }
+      // canvas {
+      //   filter: hue-rotate(60deg);
+      // }
+    }
+  }
+
+  .score {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    font-size: 30px;
+    color: #fff;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+
+  .floating-score {
+    position: absolute;
+    z-index: 4;
+    color: green;
+    animation: floating 3s ease;
+    font-size: 30px;
+    font-weight: 700;
+    opacity: 0;
+  }
+}
+
+.panorama-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// div[style*="width: 100px; height: 114px"],
+// div[style*="width: 116px; height: 130px"],
+// div[style*="width: 200px; height: 130px"],
+// div[style*="width: 200px; height: 171px"],
+div[style*="width: 312px; height: 263px"],
+div[style*="width: 333px; height: 221px"],
+div[style*="width: 333px; height: 220px"],
+div[style*="width: 761px; height: 496px"],
+div[style*="width: 66px; height: 66px"] div[style*="width: 50px; height: 50px"] {
+  pointer-events: none !important;
+
+  img {
+    pointer-events: none !important;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
